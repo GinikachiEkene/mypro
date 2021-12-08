@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	 	*{
+	 		margin: 0px;
+	 		padding: 0px;
+	 	}
+	 	h2{
+	 		font-family: sans-serif;
+	 		font-size: 40px;
+	 		padding-top: 20px;
+	 		margin-bottom: 20px;
+	 	}
+		#event{
+			text-align: center;
+			margin: 0px 400px;	
+			border: 2px black solid;
+			align-content: center;
+			justify-content: center;
+			margin-top: 100px;	
+			padding-bottom: 40px;
+		}
+		#event input{
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		.fill{
+			border-radius: 1.6em;
+			color: white;
+			background-color: black;
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+		.area select{
+			font-size: 30px;
+			padding-right: 200px;
+		}
+		.area{
+			margin: 20px;
+		}
+		label{
+			font-size: 30px;
+		}
+	</style>
+	<meta charset="utf-8">
+	<title>Event</title>
+</head>
+<body>
+	<div id="event">
+		<h2>Set Reminder </h2>
+		<form action="process.php" method="POST">
+			<input type="text" placeholder="+ Add Event" name="Event">
+			<br>
+			<br>	
+			<div>
+				<Label>Choose location:</Label>
+			</div>
+			<div class="area">
+		 		<select name="Location">
+		 			<option>Home</option>
+		 			<option>Workplace</option>
+		 			<option>School</option>
+		 			<option>Others</option>
+		 		</select>
+		 	</div>	
+		 	<div>
+		 		<input type="Location" name="address" placeholder="Enter address">
+		 	</div>
+			<br> 
+			<label>Time of event:</label>
+				<input type="time" name="time">
+				<br>	
+				<br>
+				<input type="submit" name="submit" value="Set Reminder" class="fill">
+		</form>
+	</div>
+</body>
+</html>
